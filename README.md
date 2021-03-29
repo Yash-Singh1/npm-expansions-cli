@@ -1,4 +1,4 @@
-# `npm-expansions`
+# `npm-expansions-cli`
 
 A simple CLI for extracting npm expansions written in bash.
 
