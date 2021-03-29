@@ -6,11 +6,12 @@ npm-expansions() {
       echo 'npm-expansions'
       echo
       echo 'USAGE'
-      echo '  npm-expansions [all [--comments]|--help|-h|--name|-n|--version|-v] [-- ...]'
+      echo '  npm-expansions [uninstall|all [--comments]|--help|-h|--name|-n|--version|-v] [-- ...]'
       echo
       echo '  npm-expansions                         Default: random expansion'
       echo '  npm-expansions -- ...                  Sorts the result with ... first'
       echo '  npm-expansions all [--comments]        Prints all of the expansions (--comments keeps comments)'
+      echo '  npm-expansions uninstall               Uninstalls the program'
       echo '  npm-expansions --help, -h              Print this help output'
       echo '  npm-expansions --name, -n              Print the name'
       echo '  npm-expansions --version, -v           Tell the version'
@@ -24,6 +25,7 @@ npm-expansions() {
       echo '  npm-expansions --comments'
       echo '  npm-expansions all --comments -- '
       echo '  npm-expansions -- sed "s/N/a/g"'
+      echo '  npm-expansions uninstall'
       return
     ;;
 
@@ -34,6 +36,13 @@ npm-expansions() {
 
     --name | -n)
       echo 'npm-expansions'
+      return
+    ;;
+
+    uninstall)
+      rm ~/npm-expansions.sh
+      cat ~/.bashrc | sed '/source ~\/npm-expansions\.sh/d' > ~/.bashrc
+      unset -f npm-expansions
       return
     ;;
 
