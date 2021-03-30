@@ -6,7 +6,7 @@ A simple CLI for extracting npm expansions written in bash.
 
 Installation instructions:
 
-# Script
+### Script
 
 Run the following to install it through the script:
 
