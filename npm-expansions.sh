@@ -97,29 +97,29 @@ npm-expansions() {
   if [ "$ALL" = true ]; then
     if [ "$NO_COMMENTS" = true ]; then
       if [ "$FOUND_SORT" = true ]; then
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | sed '/^#/d' | $@
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | sed '/^#/d' | $@
       else
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | sed '/^#/d'
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | sed '/^#/d'
       fi
     else
       if [ "$FOUND_SORT" = true ]; then
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | $@
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | $@
       else
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt
       fi
     fi
   else
     if [ "$NO_COMMENTS" = true ]; then
       if [ "$FOUND_SORT" = true ]; then
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | sed '/^#/d' | $@ | sort -R | head -n 1
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | sed '/^#/d' | $@ | sort -R | head -n 1
       else
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | sed '/^#/d' | sort -R | head -n 1
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | sed '/^#/d' | sort -R | head -n 1
       fi
     else
       if [ "$FOUND_SORT" = true ]; then
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | $@ | sort -R | head -n 1
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | $@ | sort -R | head -n 1
       else
-        curl -s -o- https://unpkg.com/npm-expansions@2.2.5/expansions.txt | sort -R | head -n 1
+        curl -s -o- https://unpkg.com/npm-expansions/expansions.txt | sort -R | head -n 1
       fi
     fi
   fi
