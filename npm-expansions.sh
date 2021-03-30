@@ -35,7 +35,7 @@ npm-expansions() {
     ;;
 
     --version | -v)
-      echo '1.0'
+      echo '1.1'
       return
     ;;
 

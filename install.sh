@@ -1,7 +1,7 @@
 if [ -n "$1" ]; then
   VERSION="$1"
 else
-  VERSION="1.0"
+  VERSION="1.1"
 fi
 
 curl -s -o- https://raw.githubusercontent.com/Yash-Singh1/npm-expansions-cli/$VERSION/npm-expansions.sh > ~/npm-expansions.sh
